@@ -166,7 +166,7 @@ argument at the given, zero-based index.
 For example, `NSLayoutAnchor` would provide a class method
 `classForGenericArgumentAtIndex:` that must be implemented by each of its
 subclasses:
-
+```objective-c
     @interface NSLayoutAnchor<AnchorType> (SwiftSupport)
     /// Note: must be implemented by each subclass
     +(nonnull Class)classForGenericArgumentAtIndex:(NSUInteger)index;
@@ -195,7 +195,7 @@ subclasses:
       return [NSLayoutDimension class];
     }
     @end
-
+```
 On the other hand, `GKComponentSystem` would implement an instance
 method `classForGenericArgumentAtIndex:`:
 
